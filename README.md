@@ -1,82 +1,17 @@
-MongoMemo
-=========
-http://shokai-memo2.herokuapp.com
+# hello-mongoose: Mongoose.js: elegant MongoDB object models for Node.js.  
 
-- Node.js 0.6+
-- Heroku Cedar
-- MongoDB2.0+ / mongoose 2.7+
-- MongoLab - https://addons.heroku.com/mongolab
-- MongoHQ - https://addons.heroku.com/mongohq
+MongoDB and Node.js are often used together because of their shared use of Javascript and its Object Notation (JSON).  Mongoose is a popular helper library that provides a more rigorous modeling environment for your data, enforcing a little bit more structure as needed, while still maintaining flexibility that makes MongoDB powerful.  In this article, you make a connection to a hosted MongoDB instance at add-on provider MongoLab with Mongoose and model a simple object.  
 
+## Deployment
 
-Clone
------
+To deploy [the app to Heroku](http://hello-mongoose.herokuapp.com/) you can use this [one-click deploy link](https://api.heroku.com/myapps/hello-mongoose/clone) or follow these steps:
 
-    % git clone git://github.com/shokai/heroku-express-mongo-memo.git
-    % cd heroku-express-mongo-memo
+1. `git clone git://github.com/mongolab/hello-mongoose.git && cd hello-mongoose`
+2. `heroku create`
+3. `heroku addons:add mongolab`
+3. `git push heroku master`
+4. `heroku open`
 
+## License
 
-Install Dependencies
---------------------
-
-    % npm install
-    % gem install heroku foreman
-
-
-Run
----
-
-    % foreman start
-
-=> http://localhost:5000
-
-
-Deploy
-------
-
-    % heroku create --stack cedar
-    % heroku config:add TZ=Asia/Tokyo
-
-enable addon MongoLab or MongoHQ
-
-    % heroku addons:add mongolab:starter
-    % heroku addons:add mongohq:free
-
-deploy
-
-    % git push heroku master
-    % heroku open
-
-
-Console
--------
-
-    % node
-    > require('./console');
-    > Memo.find().exec(_dump);
-
-
-LICENSE
-=======
-(The MIT License)
-
-Copyright (c) 2012 Sho Hashimoto
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT Licensed
